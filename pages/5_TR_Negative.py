@@ -76,6 +76,14 @@ def trNegLDA() -> None:
     </script>"""
     st.components.v1.html(string, width=1250, height=900, scrolling=True)
 
+    st.write("")
+    st.write("")
+    st.write("#### The topics :arrow_heading_down:")
+    st.write("")
+    lda = LdaMulticore.load("./models/trNegLDAA/trNegLDA")
+    topics = lda.print_topics()
+    st.dataframe(data = topics, use_container_width=True, column_config={"0": "Topic No.", "1": "Tokens"})
+
 st.title("Turkey:grey['s] Negative :grey[Reviews]  :nazar_amulet:")
 st.write("")
 st.write("")
