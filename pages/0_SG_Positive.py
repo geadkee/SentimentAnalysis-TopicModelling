@@ -4,6 +4,8 @@ import streamlit as st
 import streamlit.components.v1 as components
 from bertopic import BERTopic
 from gensim.models import LdaMulticore
+from openai import OpenAI
+import json
 
 
 st.set_page_config(
@@ -14,12 +16,75 @@ st.set_page_config(
         initial_sidebar_state="collapsed",        
     )
 
+testBModel = BERTopic.load("./models/sgPosBERT")
+r = testBModel.visualize_barchart()
+p = testBModel.get_topic_info()
+lda = LdaMulticore.load("./models/sgPosLDAA/sgPosLDA")
+topics = lda.print_topics(-1)
+openai_api_key = st.sidebar.text_input('OpenAI API Key', type='password')
+topicForOenAI = json.dumps(lda.print_topics())
+
+# Set OpenAI API key from Streamlit secrets
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+
+# # Set a default model
+# if "openai_model" not in st.session_state:
+#     st.session_state["openai_model"] = "gpt-3.5-turbo"
+
+# # Initialize chat history
+# if "messages" not in st.session_state:
+#     st.session_state.messages = []
+
+# # Display chat messages from history on app rerun
+# for message in st.session_state.messages:
+#     with st.chat_message(message["role"]):
+#         st.markdown(message["content"])
+
+# # Add user message to chat history
+# st.session_state.messages.append({"role": "user", "content": topics})
+
+# # Display assistant response in chat message container
+# with st.chat_message("assistant"):
+#     message_placeholder = st.empty()
+#     full_response = ""
+
+# for response in client.chat.completions.create(
+#         model=st.session_state["openai_model"],
+#         messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages],
+#         stream=True,
+#     ):
+#         full_response += (response.choices[0].delta.content or "")
+#         message_placeholder.markdown(full_response + "▌")
+#     message_placeholder.markdown(full_response)
+# st.session_state.messages.append({"role": "assistant", "content": full_response})
+
+
+response = client.chat.completions.create(
+  model="gpt-4",
+  messages=[
+    {
+      "role": "system",
+      "content": "You will be provided with a list of topics broken down into tokens for each topic . These topics is the result of topic modelling on Airbnb listings' reviews. Your job is to summarise these output from LDA's topic model, and similar topics can integrate them together into one. \n Then output them into comprehensible points."
+    },
+    {
+      "role": "user",
+      "content": topicForOenAI
+    }
+  ],
+  temperature=0.7,
+  max_tokens=450,
+  top_p=1
+)
+
+def generate_response(t):
+    # llm = OpenAI(temperature=0.7, openai_api_key=st.secrets["OPENAI_API_KEY"])
+    # st.info(llm(input_text))
+    st.info(t)
+
+
 def sgPosBERT() -> None:
 
     st.write("### using BERT	:arrow_heading_down:")
-    testBModel = BERTopic.load("./models/sgPosBERT")
-    r = testBModel.visualize_barchart()
-    p = testBModel.get_topic_info()
 
     st.plotly_chart(r, use_container_width=False, sharing="streamlit", theme="streamlit")
     st.write("")
@@ -82,10 +147,17 @@ def sgPosLDA() -> None:
     st.write("")
     st.write("#### The topics :arrow_heading_down:")
     st.write("")
-    lda = LdaMulticore.load("./models/sgPosLDAA/sgPosLDA")
-    topics = lda.print_topics()
-    st.dataframe(data = topics, column_config={"0": "Topic No.", "1": "Tokens"})
+    st.dataframe(data = topics, use_container_width=True, column_config={"0": st.column_config.Column("Topic No.", width = "small"), "1": st.column_config.Column("Tokens", width = "Large")})
 
+
+    # if not openai_api_key.startswith('sk-'):
+    #     st.warning('Please enter your OpenAI API key!', icon='⚠')
+    # if openai_api_key.startswith('sk-'):
+    generate_response(response.choices[0].message.content)
+    # message = st.chat_message("assistant", avatar = "🍀")
+    # message.write("Hello human")
+
+# 🍀 	🍈
 
 
 st.title("Singapore:grey['s] Positive :grey[Reviews]	:cityscape:")
@@ -100,6 +172,3 @@ with tab1:
 with tab2:
    sgPosLDA()
 
-
-#blue, green, orange, red, violet, gray/grey, rainbow
-#:luggage:   :handbag:   	:chart_with_upwards_trend:   	:world_map: :small_airplane: 

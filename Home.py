@@ -1,5 +1,7 @@
 import streamlit as st
 from streamlit.logger import get_logger
+from openai import OpenAI
+
 
 LOGGER = get_logger(__name__)
 
@@ -14,11 +16,17 @@ def run():
     
     # st.sidebar.markdown("# Home ")
 
-    st.write("# **:grey[To Analyse the cause of]** Satisfaction **:grey[and]** Dissatisfaction **:grey[in]** Airbnb Accommodation **:grey[using]** Sentiment Analysis **:grey[and]** Topic Modelling")
+    st.write("# **:grey[To Analyse the cause of]** Satisfaction **:grey[and]** Dissatisfaction **:grey[in]** Airbnb :small_airplane: Accommodation **:grey[using]** Sentiment Analysis **:grey[and]** Topic Modelling")
     st.write("")
     st.write("")
     st.write("")
-    # st.sidebar.success("Select Models :arrow_up:")
+    
+    # Initialization
+    if 'key' not in st.session_state:
+        st.session_state['key'] = openai_api_key
+
+    # Set OpenAI API key from Streamlit secrets
+    client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
     st.markdown(
         """

@@ -74,3 +74,4 @@ wsproto==1.2.0
 # matplotlib.pyplot
 bertopic
 gensim
+openai
