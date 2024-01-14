@@ -39,7 +39,7 @@ response1 = client.chat.completions.create(
     }
   ],
   temperature=0.7,
-  max_tokens=450,
+  max_tokens=800,
   top_p=1
 )
 
@@ -56,7 +56,7 @@ response2 = client.chat.completions.create(
     }
   ],
   temperature=0.7,
-  max_tokens=450,
+  max_tokens=800,
   top_p=1
 )
 
