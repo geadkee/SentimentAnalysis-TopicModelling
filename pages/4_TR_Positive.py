@@ -18,7 +18,7 @@ st.set_page_config(
 
 testBModel = BERTopic.load("./models/trPosBERT")
 r = testBModel.visualize_barchart()
-p = testBModel.get_topic_info()
+p = testBModel.get_topic_info().head(50)
 lda = LdaMulticore.load("./models/trPosLDAA/trPosLDA")
 topics = lda.print_topics(-1)
 TopicForOA = json.dumps(lda.print_topics())
@@ -27,11 +27,11 @@ TopicForOA = json.dumps(lda.print_topics())
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 response1 = client.chat.completions.create(
-  model="gpt-4",
+  model="gpt-4-1106-preview",
   messages=[
     {
       "role": "system",
-      "content": "You will be provided with a list of topics broken down into tokens for each topic . These topics is the result of topic modelling on Airbnb listings' reviews. Your job is to summarise these output from BERT's topic model, and similar topics can integrate them together into one. \n Then output them into comprehensible points."
+      "content": "You will be provided with a list of topics broken down into tokens for each topic . These topics is the result of topic modelling on Airbnb listings' reviews. Your job is to summarise these output from BERTopic's topic model, and similar topics can integrate them together into one. \n Then output them into comprehensible points. \n For example: '1. Many reviews discuss the quality and condition of the room, host responsiveness, and the apartment's location. 2. Noise levels and sound disturbance are a common concern among guests. 3. The proximity to public transportation, such as the BTS station, is frequently mentioned.'"
     },
     {
       "role": "user",
@@ -44,7 +44,7 @@ response1 = client.chat.completions.create(
 )
 
 response2 = client.chat.completions.create(
-  model="gpt-4",
+  model="gpt-4-1106-preview",
   messages=[
     {
       "role": "system",
