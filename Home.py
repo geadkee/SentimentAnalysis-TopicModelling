@@ -1,6 +1,5 @@
 import streamlit as st
 from streamlit.logger import get_logger
-from openai import OpenAI
 
 
 LOGGER = get_logger(__name__)
@@ -20,13 +19,6 @@ def run():
     st.write("")
     st.write("")
     st.write("")
-    
-    # Initialization
-    if 'key' not in st.session_state:
-        st.session_state['key'] = openai_api_key
-
-    # Set OpenAI API key from Streamlit secrets
-    client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
     st.markdown(
         """
