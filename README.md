@@ -6,6 +6,7 @@ Project Title:
 Project Aim:
 ### To examine the key attributes affecting tourists’ satisfaction and dissatisfaction towards accommodation through the analysis of Airbnb online reviews of Singapore, Thailand, and Turkey.
 
+</br>
 Project Objectives: </br>
 •	To find out the sentiments behind the tourists’ reviews on the Airbnb listings of Turkey, Singapore, and Thailand. </br>
 •	To generate topics from the tourists’ reviews on the Airbnb listings of Turkey, Singapore and Thailand. </br>
