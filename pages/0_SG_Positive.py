@@ -65,7 +65,7 @@ def generate_response(t):
     message.write("Chat-GPT 4.0 says: ")
     st.info(t)
 
-
+@st.cache_data(ttl=3600)
 def sgPosBERT() -> None:
 
     st.write("### using BERT	:arrow_heading_down:")
@@ -82,6 +82,7 @@ def sgPosBERT() -> None:
                 )
     generate_response(response1.choices[0].message.content)
 
+@st.cache_data(ttl=3600)
 def sgPosLDA() -> None:
 
     st.write("### using LDA :arrow_heading_down:")

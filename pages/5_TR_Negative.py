@@ -66,6 +66,7 @@ def generate_response(t):
     st.info(t)
 
 
+@st.cache_data(ttl=3600)
 def trNegBERT() -> None:
 
     st.write("### using BERT	:arrow_heading_down:")
@@ -82,6 +83,7 @@ def trNegBERT() -> None:
                 )
     generate_response(response1.choices[0].message.content)
 
+@st.cache_data(ttl=3600)
 def trNegLDA() -> None:
 
     st.write("### using LDA :arrow_heading_down:")
