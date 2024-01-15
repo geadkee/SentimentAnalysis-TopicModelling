@@ -60,6 +60,7 @@ response2 = client.chat.completions.create(
   top_p=1
 )
 
+@st.cache_data(ttl=3600)
 def generate_response(t):
     message = st.chat_message("assistant")
     message.write("Chat-GPT 4.0 says: ")
