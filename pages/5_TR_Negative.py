@@ -48,7 +48,7 @@ response2 = client.chat.completions.create(
   messages=[
     {
       "role": "system",
-      "content": "You will be provided with a list of topics broken down into tokens for each topic . These topics is the result of topic modelling on Airbnb listings' reviews. Your job is to summarise these output from LDA's topic model, and similar topics can integrate them together into one. \n Then output them into comprehensible points."
+      "content": "You will be provided with a list of topics broken down into tokens for each topic . These topics is the result of topic modelling on Airbnb listings' reviews. Your job is to summarise these output from LDA's topic model, and similar topics can integrate them together into one. \n Then output them into comprehensible points.\n For example: '1. Many reviews discuss the quality and condition of the room, host responsiveness, and the apartment's location. 2. Noise levels and sound disturbance are a common concern among guests. 3. The proximity to public transportation, such as the BTS station, is frequently mentioned.'"
     },
     {
       "role": "user",

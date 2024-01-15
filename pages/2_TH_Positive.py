@@ -73,7 +73,7 @@ def thPosBERT() -> None:
     st.write("### using BERT	:arrow_heading_down:")
     
 
-    st.plotly_chart(r, use_container_width=False, sharing="streamlit", theme="streamlit")
+    st.plotly_chart(r, use_container_width=True, sharing="streamlit", theme="streamlit")
     st.write("")
     st.write("")
     st.subheader("Topic Information :arrow_heading_down:")
