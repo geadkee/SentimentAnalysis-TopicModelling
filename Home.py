@@ -37,7 +37,7 @@ def run():
         - To offer practical suggestions for Malaysia's hospitality service based on the accommodation research.
 
         ### Check out the source code
-        - My GitHuub [repository](https://github.com/geadkee/SentiAnalysis-TopicModel)
+        - My GitHuub [repository](https://github.com/geadkee/SentimentAnalysis-TopicModelling)
     """
     )
 
