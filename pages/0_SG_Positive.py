@@ -60,6 +60,24 @@ response2 = client.chat.completions.create(
   top_p=1
 )
 
+response3 = client.chat.completions.create(
+  model="gpt-4-1106-preview",
+  messages=[
+    {
+      "role": "system",
+      "content": "You will be provided with a list of topics broken down into tokens for each topic . These topics is the result of topic modelling on Airbnb listings' reviews. Your job is to summarise these output from BERTopic's topic model, and similar topics can integrate them together into one. \n Then output them into comprehensible points. \n For example: '1. Many reviews discuss the quality and condition of the room, host responsiveness, and the apartment's location. 2. Noise levels and sound disturbance are a common concern among guests. 3. The proximity to public transportation, such as the BTS station, is frequently mentioned.' \n From the summarisation, give me a fw recommendations for Airbnb HOst to implement for them to improve their services."
+    },
+    {
+      "role": "user",
+      "content": p.to_json()
+    }
+  ],
+  temperature=0.7,
+  max_tokens=450,
+  top_p=1
+)
+
+
 @st.cache_data(ttl=3600)
 def generate_response(t):
     message = st.chat_message("assistant")
@@ -82,6 +100,7 @@ def sgPosBERT() -> None:
                  column_config=None
                 )
     generate_response(response1.choices[0].message.content)
+    generate_response(response3.choices[0].message.content)
 
 @st.cache_data(ttl=3600)
 def sgPosLDA() -> None:
