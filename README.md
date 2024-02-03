@@ -14,6 +14,10 @@ Project Objectives: </br>
 •	To offer practical suggestions for Malaysia's hospitality service based on the accommodation research. </br>
 
 </br>
+#### The results on streamlit:<a herf= "https://airbnb-sentianalysis-topicmodel.streamlit.app/" >On to my APP</a></br>
+##### Do note that I integrated OPENAI's API for the intepretation of the topics / tokens generated.
+
+</br>
 ** Note: The datasets for this project can be downloaded from: <a href="https://drive.google.com/file/d/1vkw1Um8A60LnWpeYtzJCZ5HJ13cCoYNM/view?usp=drive_link">My Drive</a></br>
           - or from <a href="http://insideairbnb.com/get-the-data/">InsideAirbnb.com</a>
 
