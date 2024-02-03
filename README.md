@@ -20,17 +20,17 @@ Project Objectives: </br>
 ### App Example:
 * ***Singapore's Positive Reviews***
   
-  ![image](https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/4f37a053-468e-4797-8339-fef398af7c84)
+  ![image](https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/4f37a053-468e-4797-8339-fef398af7c84 | width=100)
   
 * ***Integration of OPENAI's "gpt-4-1106-preview"***
   
-  ![image](https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/b283c303-a0cc-46d6-b99f-c90a254e104c)
+  ![image](https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/b283c303-a0cc-46d6-b99f-c90a254e104c | width=100)
   
 * If there happens to be error in the ***chatGPT says*** components, might be because of unsufficient API key credits, you can fork this project and create a ***secrets.toml*** file, then insert your OPENAI's API key in the file by this format: `OPENAI_API_KEY = "[yourApiKeyHere]"`
   
-  ![image](https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/665a1084-c0bd-4071-852b-ada6f1d75566)
+  ![image](https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/665a1084-c0bd-4071-852b-ada6f1d75566 | width=100)
 
 
 </br>
-** Note: The datasets for this project can be downloaded from: <a href="https://drive.google.com/file/d/1vkw1Um8A60LnWpeYtzJCZ5HJ13cCoYNM/view?usp=drive_link">My Drive</a></br>
+### ** Note: The datasets for this project can be downloaded from: <a href="https://drive.google.com/file/d/1vkw1Um8A60LnWpeYtzJCZ5HJ13cCoYNM/view?usp=drive_link">My Drive</a></br>
           - or from <a href="http://insideairbnb.com/get-the-data/">InsideAirbnb.com</a>
