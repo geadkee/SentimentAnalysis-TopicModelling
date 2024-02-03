@@ -22,7 +22,7 @@ Project Objectives: </br>
   
   <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/4f37a053-468e-4797-8339-fef398af7c84' height='400px'>
   
-* ***Integration of OPENAI's "gpt-4-1106-preview"***
+* ***Integration of OPENAI's model:*** `gpt-4-1106-preview`
   
   <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/b283c303-a0cc-46d6-b99f-c90a254e104c' height='400px' >
   
