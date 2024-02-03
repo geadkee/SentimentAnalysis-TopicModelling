@@ -31,6 +31,5 @@ Project Objectives: </br>
   <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/665a1084-c0bd-4071-852b-ada6f1d75566' height='350px' >
 
 
-</br>
 ### ** Note: The datasets for this project can be downloaded from: <a href="https://drive.google.com/file/d/1vkw1Um8A60LnWpeYtzJCZ5HJ13cCoYNM/view?usp=drive_link">My Drive</a></br>
           - or from <a href="http://insideairbnb.com/get-the-data/">InsideAirbnb.com</a>
