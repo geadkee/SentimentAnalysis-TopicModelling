@@ -21,15 +21,15 @@ Project Objectives: </br>
 * ***Singapore's Positive Reviews***
   
   ![image](https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/4f37a053-468e-4797-8339-fef398af7c84)
-  <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/4f37a053-468e-4797-8339-fef398af7c84' height='300px'>
+  <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/4f37a053-468e-4797-8339-fef398af7c84' height='450px'>
   
 * ***Integration of OPENAI's "gpt-4-1106-preview"***
   
-  ![image](https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/b283c303-a0cc-46d6-b99f-c90a254e104c)
+  <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/b283c303-a0cc-46d6-b99f-c90a254e104c' height='450px' >
   
 * If there happens to be error in the ***chatGPT says*** components, might be because of unsufficient API key credits, you can fork this project and create a ***secrets.toml*** file, then insert your OPENAI's API key in the file by this format: `OPENAI_API_KEY = "[yourApiKeyHere]"`
   
-  ![image](https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/665a1084-c0bd-4071-852b-ada6f1d75566)
+  <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/665a1084-c0bd-4071-852b-ada6f1d75566' height='500px'
 
 
 </br>
