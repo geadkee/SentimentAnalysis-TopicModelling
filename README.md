@@ -13,9 +13,8 @@ Project Objectives: </br>
 •	To discover the source of satisfaction and dissatisfaction based on the attributes listed after topic modelling. </br>
 •	To offer practical suggestions for Malaysia's hospitality service based on the accommodation research. </br>
 
-</br>
-
-#### The results on streamlit: <a herf= "https://airbnb-sentianalysis-topicmodel.streamlit.app/" >On to my APP</a></br>
+#### The results on streamlit: 
+<a herf= "https://airbnb-sentianalysis-topicmodel.streamlit.app/" >On to my APP</a></br>
 ##### FYI:  I integrated OPENAI's API for the intepretation of the topics / tokens generated.
 
 </br>
