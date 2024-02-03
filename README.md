@@ -20,7 +20,6 @@ Project Objectives: </br>
 ### App Example:
 * ***Singapore's Positive Reviews***
   
-  ![image](https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/4f37a053-468e-4797-8339-fef398af7c84)
   <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/4f37a053-468e-4797-8339-fef398af7c84' height='400px'>
   
 * ***Integration of OPENAI's "gpt-4-1106-preview"***
