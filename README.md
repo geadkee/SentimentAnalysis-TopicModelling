@@ -26,7 +26,7 @@ Project Objectives: </br>
   
   <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/b283c303-a0cc-46d6-b99f-c90a254e104c' height='400px' >
   
-* If there happens to be error in the <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/1e21f376-9f9e-45ce-9cf5-23b580d4efa7' height='25'> component, might be because of unsufficient API key credits, you can fork this project and create a ***secrets.toml*** file, then insert your OPENAI's API key in the file by this format: `OPENAI_API_KEY = "[yourApiKeyHere]"`
+* If there happens to be error in the <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/1e21f376-9f9e-45ce-9cf5-23b580d4efa7' height='25'> component, might be because of unsufficient API key credits, you can fork this project and create a `secrets.toml` file, then insert your OPENAI's API key in the file by this format: `OPENAI_API_KEY = "[yourApiKeyHere]"`
   
   <img src='https://github.com/geadkee/SentimentAnalysis-TopicModelling/assets/87471855/665a1084-c0bd-4071-852b-ada6f1d75566' height='350px' >
 
